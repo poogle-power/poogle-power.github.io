@@ -6,6 +6,18 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <body>
-    <div id="buttons"></div>
+    <div id="buttons">
+        <input type="button" id="refresh" value="Get Items" onclick="getItemsFromWebPages()">
+    </div>
+    <div>
+        <h2>Output: </h2>
+        <span id="output"></span>
+    </div>
 </body>
+<script>
+    $(document).ready(function () {
+        let output = $("#output");
+        $("#refresh").click(getItemsFromWebPages(output));
+    })
+</script>
 </html>
